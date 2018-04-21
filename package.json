@@ -16,13 +16,15 @@
         }
     },
     "dependencies": {
+        "axios": "^0.18.0",
         "koa": "^2.4.1",
         "koa-mount": "^3.0.0",
         "koa-static": "^4.0.1",
         "lodash": "^4.17.4",
         "moment": "^2.19.3",
         "nek-ui": "^0.6.2-beta.20",
-        "regular-state": "^0.6.0-beta.8"
+        "regular-state": "^0.6.0-beta.8",
+        "nprogress": "^0.2.0"
     },
     "devDependencies": {
         "autoprefixer": "^6.7.2",

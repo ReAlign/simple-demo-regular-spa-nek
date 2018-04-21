@@ -1,0 +1,33 @@
+@progress-color: #54a8f7;
+
+#page {
+    #nprogress {
+        pointer-events: none;
+        .bar {
+            background-color: @progress-color;
+            position: fixed;
+            z-index: 1031;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+
+            animation: u-progress-striped 2s linear infinite;
+        }
+
+        .u-progress {
+            .progress_bar {
+                background-color: @progress-color;
+            }
+        }
+    }
+
+    .nprogress-custom-parent {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .nprogress-custom-parent #nprogress .bar {
+        position: absolute;
+    }
+}

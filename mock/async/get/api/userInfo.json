@@ -1,0 +1,33 @@
+{
+    "retCode": 200,
+    "retDesc": "ok",
+    "data": {
+        "userBaseInfo": {
+            "jobNo": "9527",
+            "userName": "ReAlign"
+        },
+        "menus": [
+            {
+                "menuName": "index",
+                "link": "/",
+                "children": []
+            },
+            {
+                "menuName": "menuLevel1",
+                "link": "/app",
+                "children": [
+                    {
+                        "menuName": "page1",
+                        "link": "/page1",
+                        "children": []
+                    },
+                    {
+                        "menuName": "page2",
+                        "link": "/page2",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,6 +1,7 @@
 /* BaseModal */
 import _ from 'widget/util.js';
 import { KLModal } from 'nek-ui';
+import BaseMixin from './mixin/_mixin';
 import filter from 'widget/filter.js';
 
 const BaseModalComponent = KLModal.extend({
@@ -44,6 +45,7 @@ const BaseModalComponent = KLModal.extend({
     }
 });
 
+BaseModalComponent.use(BaseMixin);
 BaseModalComponent.filter(filter);
 
 export default BaseModalComponent;

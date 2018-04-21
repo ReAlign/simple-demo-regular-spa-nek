@@ -17,6 +17,7 @@ import SidebarMenu from './components/sidebar-menu/index';
 
 import template from './index.html';
 import Config from './config';
+import * as API from './api';
 
 const Layout = BaseComponent.extend({
     template,
@@ -27,38 +28,18 @@ const Layout = BaseComponent.extend({
     },
 
     async init() {
-        const res = {
-            data: {
-                userBaseInfo: {
-                    jobNo: '9527',
-                    userName: 'ReAlign'
-                },
-                menus: [
-                    {
-                        menuName: 'index',
-                        link: '/',
-                        children: []
-                    },
-                    {
-                        menuName: 'menuLevel1',
-                        link: '/app',
-                        children: [
-                            {
-                                menuName: 'page1',
-                                link: '/page1',
-                                children: []
-                            },
-                            {
-                                menuName: 'page2',
-                                link: '/page2',
-                                children: []
-                            }
-                        ]
-                    }
-                ]
-            }
-        };
-        this.cbGetUserInfo(res);
+        this.getUserInfo();
+    },
+
+    async getUserInfo() {
+        try {
+            const res = await API.getUserInfo();
+            this.cbGetUserInfo(res || {});
+        } catch(error) {
+            console.log(error);
+        }
+
+        this.$update();
     },
 
     cbGetUserInfo(res) {
