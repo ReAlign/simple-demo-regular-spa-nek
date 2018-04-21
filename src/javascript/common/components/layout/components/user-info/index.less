@@ -1,0 +1,31 @@
+@total-witdh: 320px;
+@logout-width: 50px;
+@name-margin-r: 16px;
+
+.m-hd-info {
+    position: relative;
+    display: block;
+    max-width: @total-witdh;
+    height: 100%;
+    margin: 0 @name-margin-r 0 0;
+
+    .u-hd-info-name, .u-hd-info-logout {
+        display: block;
+        height: 100%;
+        line-height: 60px;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .u-hd-info-name {
+        max-width: calc(~"@{total-witdh} - @{logout-width} - @{name-margin-r}");
+        margin-right: @name-margin-r;
+    }
+
+    .u-hd-info-logout {
+        width: @logout-width;
+        &:hover {
+            color: red;
+        }
+    }
+}

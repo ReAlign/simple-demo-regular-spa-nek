@@ -1,0 +1,16 @@
+{#if showFlag}
+<kl-sidebar
+    menus={menus}
+    top="60px"
+    class="m-sidebar-no-toggle"
+    bodyEl="j-page-body"
+    titleKey={titleKey}
+    pageKey={pageKey}
+    router={routerObj}
+    routeKey={routerKey}
+    width="220px"
+    scrollIntoView
+    scrollTimeout="300"
+    on-menuitem-click={this.menuItemEvt($event)}>
+</kl-sidebar>
+{/if}

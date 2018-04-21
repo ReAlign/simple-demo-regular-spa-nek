@@ -1,0 +1,60 @@
+@bd-pv: 10px;
+@bd-ph: 12px;
+@bd-pv2: @bd-pv * 2;
+@bd-ph2: @bd-ph * 2;
+
+@g-bd-min-width: 980px;
+
+.g-hd {
+    min-width: 800px;
+    height: 60px;
+    background-color: #22354A;
+    color: #fff;
+}
+
+.g-bd {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 220px;
+    margin-left: 10px;
+    min-width: @g-bd-min-width;
+    padding: @bd-pv @bd-ph;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: left .5s;
+
+    .bd_view {
+        position: absolute;
+        width: calc(~"100% - @{bd-ph}");
+        height: calc(~"100% - @{bd-pv2}");
+        opacity: 0;
+    }
+}
+
+.g-ft {
+    margin-top: 10px;
+    color: #9FA6AF;
+    text-align: center;
+}
+
+.animated-r-l {
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    &.fadeInR2L {
+        animation-name: fadeInR2L;
+    }
+}
+
+@keyframes fadeInR2L {
+    0% {
+        opacity: .3;
+        left: 16px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
