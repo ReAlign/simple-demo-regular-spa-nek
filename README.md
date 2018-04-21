@@ -2,6 +2,7 @@
 
 * very simple demo of regular spa,  library use nek
 * just 2 pages
+* mini project
 
 ## Installation
 
