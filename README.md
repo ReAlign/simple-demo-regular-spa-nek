@@ -1,8 +1,9 @@
 # simple-demo-regular-spa-nek
 
-* very simple demo of regular spa,  library use nek
-* just 2 pages
-* mini project
+* 极简demo
+* 权限控制
+* 页面控制
+* 请求取消
 
 ## Installation
 
